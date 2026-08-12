@@ -201,9 +201,7 @@ function Index() {
           </p>
         </header>
 
-        <hr className="my-8 border-border" />
-
-        <section aria-label="About">
+        <section aria-label="About" className="mt-8">
           <p className="text-[15px] leading-7 text-muted-foreground">
             <span className="text-foreground">
               Product Designer specializing in UX/UI, product design, design systems, and native iOS
