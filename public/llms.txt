@@ -1,0 +1,26 @@
+# s1nka
+
+> s1nka is a Product Designer who designs, builds, and ships real products — working across UX/UI and product design, with native iOS apps live on the App Store.
+
+## About
+
+Product Designer focused on thoughtful, intuitive, visually refined digital experiences. Combines strong visual design with user-centered thinking, and ships end-to-end: design, code, App Store release. Additional interests: programming, AI, and music production.
+
+## Skills
+
+- Design: product design, UX/UI, design systems, prototyping, Figma
+- Build: SwiftUI, React + TypeScript, AI-assisted development
+- Beyond: music production, content automation
+
+## Selected Projects
+
+- Annoto (https://apps.apple.com/app/id6774044198): iOS screenshot annotation app with a share extension, built in SwiftUI. Live on the App Store.
+- MindWhisper (https://apps.apple.com/app/id6755791263): voice-journaling app for mental wellbeing with AI-powered reflections. Live on the App Store.
+- Decision Engine AI (https://apps.apple.com/app/id6760727264): native SwiftUI app for structured, AI-assisted decision making. Live on the App Store.
+- Brain Snacks: bite-size learning feed for iOS.
+
+## Contact
+
+- GitHub: https://github.com/Sinka48
+- Email: kakh.sinauridze@gmail.com
+- Website: https://s1nka.com
