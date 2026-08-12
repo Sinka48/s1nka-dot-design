@@ -4,6 +4,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@utility md-token {
+  color: var(--md-token);
+  font-weight: 400;
+}
+
+@utility md-em {
+  color: var(--foreground);
+  font-style: italic;
+}
+
+@utility md-strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
 /*
  * Design system definition.
  *
@@ -63,8 +82,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.985 0.004 90);
+  --foreground: oklch(0.22 0.01 80);
+  --md-token: oklch(0.72 0.11 45);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -74,12 +94,12 @@
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: oklch(0.44 0.012 80);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.9 0.008 85);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
