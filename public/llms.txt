@@ -10,8 +10,8 @@ Product Designer combining strong visual design with user-centered thinking, shi
 
 - Design: fuzzy idea → shippable product (first sketch to App Store, no hand-offs); design systems (tokens, components, Figma libraries)
 - Build: ships what he designs — four iOS apps live, end-to-end SwiftUI; React + TypeScript on the web; AI-accelerated workflow
-- Management: product roadmap, prioritization, scope decisions, and release management — solo across four live apps
-- Ship: CI/CD release pipelines (one push, not a project); server-side AI proxies, no API keys in clients
+- Management: product roadmap, prioritization, scope decisions, release management
+- Ship: server-side AI proxies, no API keys in clients
 - Beyond: music production, content automation
 
 ## Selected Projects (all solo from scratch — idea, design, code, release; all live on the App Store)

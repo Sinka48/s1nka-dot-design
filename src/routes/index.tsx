@@ -71,11 +71,7 @@ const skillGroups = [
     items: [
       {
         lead: "Product management, built in.",
-        detail: "Roadmap, prioritization, scope calls, releases — handled solo across four live apps.",
-      },
-      {
-        lead: "Releases as routine.",
-        detail: "CI/CD — an update is one push, not a project.",
+        detail: "Roadmap, prioritization, scope calls, releases.",
       },
       {
         lead: "Secure by default.",
