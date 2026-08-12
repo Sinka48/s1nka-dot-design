@@ -149,10 +149,10 @@ function Index() {
 
         <section aria-label="About">
           <p className="text-[15px] leading-7 text-muted-foreground">
-            <strong className="font-semibold text-foreground">
+            <span className="text-foreground">
               Product Designer specializing in UX/UI, product design, design systems, and native iOS
               applications.
-            </strong>{" "}
+            </span>{" "}
             I combine strong visual design with user-centered thinking — and I don't stop at
             mockups: I <em>design, build, and ship</em> my own apps to the App Store. I also explore{" "}
             <em>programming</em>, <em>AI</em>, and <em>music production</em>, which gives me a
@@ -169,7 +169,7 @@ function Index() {
                 <ul className="mt-1 space-y-2">
                   {group.items.map((item) => (
                     <li key={item.lead}>
-                      <span className="font-semibold text-foreground">{item.lead}</span>{" "}
+                      <span className="text-foreground">{item.lead}</span>{" "}
                       {item.detail}
                     </li>
                   ))}
@@ -205,7 +205,7 @@ function Index() {
                   <Link
                     to="/projects/$projectId"
                     params={{ projectId: project.slug }}
-                    className="font-semibold text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                    className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
                   >
                     {project.name}
                   </Link>

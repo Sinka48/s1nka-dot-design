@@ -50,7 +50,7 @@ export const Route = createFileRoute("/projects/$projectId")({
 function Meta({ label, value }: { label: string; value: string }) {
   return (
     <li>
-      <span className="font-semibold text-foreground">{label}:</span> {value}
+      <span className="text-foreground">{label}:</span> {value}
     </li>
   );
 }
@@ -116,7 +116,7 @@ function ProjectPage() {
               href={project.appStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+              className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
             >
               View on the App Store →
             </a>
