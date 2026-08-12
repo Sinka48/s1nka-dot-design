@@ -21,16 +21,17 @@ export const projects: Project[] = [
     slug: "tbc-design-system",
     category: "selected",
     kind: "design-system",
-    name: "TBC Design System",
+    name: "TBC Bank Design System",
     tagline: "Design system for Georgia's leading digital bank",
-    role: "Product Designer",
-    platform: "iOS · Android · Web",
+    role: "Product Designer — design system owner for mobile platforms",
+    platform: "iOS · Android",
     stack: "Figma, design tokens",
-    contribution: "Design system foundations, components, mobile app UI",
+    contribution:
+      "Owning the design system for mobile platforms — foundations, components, patterns, mobile app UI",
     status: "In production",
     link: null,
     overview:
-      "TBC's design system: the foundations, tokens, and component library behind the bank's digital products, including the mobile app UI.",
+      "TBC Bank's design system on mobile: the foundations, tokens, and component library behind the bank's iOS and Android apps. I manage everything for the mobile platforms.",
     design:
       "Scalable foundations — color, type, and spacing tokens with reusable components — and the mobile app UI patterns built on top of them.",
     build:

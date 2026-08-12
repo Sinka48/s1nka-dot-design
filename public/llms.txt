@@ -16,7 +16,7 @@ Product Designer combining strong visual design with user-centered thinking, shi
 
 ## Selected Projects
 
-- TBC Design System (https://s1nka.com/projects/tbc-design-system): full design system for TBC Bank — foundations, tokens, component library, and mobile app UI. Role: Product Designer. In production.
+- TBC Bank Design System (https://s1nka.com/projects/tbc-design-system): design system for TBC Bank's mobile platforms (iOS, Android) — foundations, tokens, component library, mobile app UI. Role: Product Designer, owner of the design system for mobile platforms. In production.
 - paste.bio (https://s1nka.com/projects/paste-bio | https://paste.bio): online booking + link-in-bio web app for solo professionals. React + TypeScript + Supabase. Solo from scratch; live on the web.
 
 ## Side Hustles (all solo from scratch — idea, design, code, release; all live on the App Store)
