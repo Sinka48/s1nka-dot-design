@@ -69,7 +69,7 @@ function ProjectPage() {
 
   return (
     <main className="min-h-screen bg-background px-6 py-20 font-mono text-foreground">
-      <article className="w-full max-w-2xl">
+      <article className="w-full">
         <p className="md-token text-sm">
           <Link to="/" className="hover:text-foreground">
             s1nka.com
