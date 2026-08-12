@@ -1,14 +1,22 @@
-# Welcome to your Lovable project
+# s1nka -  digital space
+
+personal website with title s1nka . it should look like its format md , this content "About Me
+
+Product Designer focused on creating thoughtful, intuitive, and visually refined digital experiences. I work across UX/UI and product design, combining strong visual design with user-centered thinking and an interest in technology. I also explore programming, AI, and music production, which gives me a broader perspective on building and shaping digital products."
+
+use relevant font
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://s1nka-dot-design.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e4299e50-a26e-4325-8126-3d26441a41b9).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +28,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
