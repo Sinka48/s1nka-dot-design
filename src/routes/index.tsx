@@ -45,18 +45,15 @@ const skillGroups = [
     items: [
       {
         lead: "Fuzzy idea → shippable product.",
-        detail:
-          "I take a problem from first sketch to a live App Store release — no hand-offs, nothing lost in translation.",
+        detail: "First sketch to App Store — no hand-offs.",
       },
       {
         lead: "Design systems that scale.",
-        detail:
-          "Tokens, reusable components, and Figma libraries that keep a product consistent while it grows.",
+        detail: "Tokens, components, Figma libraries.",
       },
       {
         lead: "Prototypes that settle debates.",
-        detail:
-          'Quick interactive Figma prototypes that answer "will this actually work?" before a line of code is written.',
+        detail: "Test it in Figma before code exists.",
       },
     ],
   },
@@ -65,13 +62,11 @@ const skillGroups = [
     items: [
       {
         lead: "I ship what I design.",
-        detail:
-          "Four native iOS apps live on the App Store, built end-to-end in SwiftUI. React + TypeScript when the product lives on the web.",
+        detail: "Four iOS apps live, end-to-end SwiftUI. React + TypeScript on the web.",
       },
       {
-        lead: "AI-accelerated workflow.",
-        detail:
-          "I use AI tooling to compress design → build → ship from months to weeks — while keeping taste in the loop.",
+        lead: "AI-accelerated.",
+        detail: "Design → build → ship in weeks. Taste stays human.",
       },
     ],
   },
@@ -79,19 +74,16 @@ const skillGroups = [
     label: "Ship",
     items: [
       {
-        lead: "Releases as routine, not events.",
-        detail:
-          "Automated CI/CD pipelines (GitHub Actions, Fastlane) — shipping an update is one push, not a project.",
+        lead: "Releases as routine.",
+        detail: "CI/CD — an update is one push, not a project.",
       },
       {
         lead: "Secure by default.",
-        detail:
-          "Server-side AI proxies (Supabase Edge Functions) so no API keys ever ship inside an app.",
+        detail: "Server-side AI proxies. No API keys ever ship in an app.",
       },
       {
         lead: "Range beyond screens.",
-        detail:
-          "Music production and content automation — trained taste and systems thinking from outside product design.",
+        detail: "Music production, content automation.",
       },
     ],
   },
@@ -147,7 +139,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-background px-6 py-20 font-mono text-foreground">
       <article className="mx-auto w-full max-w-2xl">
-        <p className="md-token text-sm">README.md</p>
+        <p className="md-token text-sm">s1nka.com</p>
 
         <header>
           <h1 className="mt-6 text-3xl font-semibold tracking-tight">s1nka</h1>
@@ -195,7 +187,7 @@ function Index() {
         <section aria-labelledby="projects" className="mt-12">
           <SectionHeading id="projects">Selected Projects</SectionHeading>
           <p className="mt-3 text-[13px] text-muted-foreground/80">
-            All designed, built, and shipped by me — live on the App Store.{" "}
+            Every project here is mine from scratch — idea, design, code, release. All live.{" "}
             <Link
               to="/projects"
               className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"

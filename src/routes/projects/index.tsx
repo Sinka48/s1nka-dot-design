@@ -82,7 +82,7 @@ function ProjectsIndex() {
             to="/"
             className="underline decoration-border underline-offset-4 hover:text-foreground"
           >
-            ← back to README.md
+            ← back to s1nka.com
           </Link>
         </p>
       </article>
