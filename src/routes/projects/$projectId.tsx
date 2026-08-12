@@ -17,13 +17,19 @@ export const Route = createFileRoute("/projects/$projectId")({
     const url = `${SITE_URL}/projects/${project.slug}`;
     const jsonLd = {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type":
+        project.kind === "app"
+          ? "SoftwareApplication"
+          : project.kind === "web"
+            ? "WebApplication"
+            : "CreativeWork",
       name: project.name,
-      operatingSystem: "iOS",
-      applicationCategory: "MobileApplication",
+      ...(project.kind === "app"
+        ? { operatingSystem: "iOS", applicationCategory: "MobileApplication" }
+        : {}),
       description: `${project.tagline}. ${project.overview}`,
       url,
-      ...(project.appStoreUrl ? { installUrl: project.appStoreUrl } : {}),
+      ...(project.link ? { installUrl: project.link.url } : {}),
       author: {
         "@type": "Person",
         name: "Kakhaber Sinauridze",
@@ -110,15 +116,15 @@ function ProjectPage() {
         <Section title="Build">{project.build}</Section>
         <Section title="Outcome">{project.outcome}</Section>
 
-        {project.appStoreUrl && (
+        {project.link && (
           <p className="mt-10 text-[15px]">
             <a
-              href={project.appStoreUrl}
+              href={project.link.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
             >
-              View on the App Store →
+              {project.kind === "app" ? "View on the App Store →" : "Open paste.bio →"}
             </a>
           </p>
         )}

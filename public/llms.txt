@@ -14,7 +14,12 @@ Product Designer combining strong visual design with user-centered thinking, shi
 - Ship: server-side AI proxies, no API keys in clients
 - Beyond: music production, content automation
 
-## Selected Projects (all solo from scratch — idea, design, code, release; all live on the App Store)
+## Selected Projects
+
+- TBC Design System (https://s1nka.com/projects/tbc-design-system): full design system for TBC Bank — foundations, tokens, component library, and mobile app UI. Role: Product Designer. In production.
+- paste.bio (https://s1nka.com/projects/paste-bio | https://paste.bio): online booking + link-in-bio web app for solo professionals. React + TypeScript + Supabase. Solo from scratch; live on the web.
+
+## Side Hustles (all solo from scratch — idea, design, code, release; all live on the App Store)
 
 - Annoto (https://s1nka.com/projects/annoto | https://apps.apple.com/app/id6774044198): iOS screenshot annotation app with a Share Extension. SwiftUI + SwiftData. v1.0.2.
 - MindWhisper AI (https://s1nka.com/projects/mindwhisper | https://apps.apple.com/app/id6755791263): voice-journaling app for mental wellbeing with AI-powered reflections. React Native (Expo) + Supabase Edge Functions. v1.1.3.

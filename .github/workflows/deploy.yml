@@ -43,7 +43,7 @@ jobs:
           done
           mkdir -p site
           cp -r .output/public/. site/
-          ROUTES="/ /projects /projects/annoto /projects/mindwhisper /projects/decision-engine-ai /projects/brain-snacks"
+          ROUTES="/ /projects /projects/tbc-design-system /projects/paste-bio /projects/annoto /projects/mindwhisper /projects/decision-engine-ai /projects/brain-snacks"
           for route in $ROUTES; do
             if [ "$route" = "/" ]; then out="site/index.html"; else mkdir -p "site$route"; out="site$route/index.html"; fi
             curl -sf "http://localhost:3000$route" -o "$out"

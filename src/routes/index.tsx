@@ -1,6 +1,9 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
-import { projects } from "../lib/projects";
+import { projects, type Project } from "../lib/projects";
+
+const selectedProjects = projects.filter((p) => p.category === "selected");
+const sideHustles = projects.filter((p) => p.category === "side-hustle");
 
 const SITE_URL = "https://s1nka.com";
 
@@ -131,6 +134,59 @@ function SectionHeading({ id, children }: { id: string; children: string }) {
   );
 }
 
+function ProjectRow({ project }: { project: Project }) {
+  return (
+    <li className="flex items-start gap-4">
+      <img
+        src={`/images/${project.slug}-icon.webp`}
+        alt={`${project.name} icon`}
+        width={44}
+        height={44}
+        loading="lazy"
+        className="mt-1 h-11 w-11 shrink-0 rounded-[10px] border border-border"
+      />
+      <div className="min-w-0">
+        <Link
+          to="/projects/$projectId"
+          params={{ projectId: project.slug }}
+          className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+        >
+          {project.name}
+        </Link>{" "}
+        <span className="md-token text-[13px]">
+          {project.kind === "app"
+            ? "iOS app"
+            : project.kind === "web"
+              ? "web app"
+              : "design system"}
+        </span>
+        <span className="block text-muted-foreground">
+          {project.tagline}.{" "}
+          {(project.overview.split(". ")[0] ?? project.overview).replace(/\.$/, "")}.
+        </span>
+        <span className="block text-[13px] text-muted-foreground/80">
+          <span className="md-token">role:</span> {project.role}{" "}
+          <span className="md-token">· stack:</span> {project.stack}
+          {project.link && (
+            <>
+              {" "}
+              <span className="md-token">·</span>{" "}
+              <a
+                href={project.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+              >
+                {project.link.label}
+              </a>
+            </>
+          )}
+        </span>
+      </div>
+    </li>
+  );
+}
+
 function Index() {
   return (
     <main className="min-h-screen bg-background px-6 py-20 font-mono text-foreground">
@@ -169,8 +225,7 @@ function Index() {
                 <ul className="mt-1 space-y-2">
                   {group.items.map((item) => (
                     <li key={item.lead}>
-                      <span className="text-foreground">{item.lead}</span>{" "}
-                      {item.detail}
+                      <span className="text-foreground">{item.lead}</span> {item.detail}
                     </li>
                   ))}
                 </ul>
@@ -181,8 +236,18 @@ function Index() {
 
         <section aria-labelledby="projects" className="mt-12">
           <SectionHeading id="projects">Selected Projects</SectionHeading>
+          <ul className="mt-5 space-y-6 text-[15px] leading-7">
+            {selectedProjects.map((project) => (
+              <ProjectRow key={project.slug} project={project} />
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="side-hustles" className="mt-12">
+          <SectionHeading id="side-hustles">Side Hustles</SectionHeading>
           <p className="mt-3 text-[13px] text-muted-foreground/80">
-            Every project here is mine from scratch — idea, design, code, release. All live.{" "}
+            Mine from scratch — idea, design, code, release. Native iOS apps, all live on the App
+            Store.{" "}
             <Link
               to="/projects"
               className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
@@ -191,48 +256,8 @@ function Index() {
             </Link>
           </p>
           <ul className="mt-5 space-y-6 text-[15px] leading-7">
-            {projects.map((project) => (
-              <li key={project.slug} className="flex items-start gap-4">
-                <img
-                  src={`/images/${project.slug}-icon.webp`}
-                  alt={`${project.name} app icon`}
-                  width={44}
-                  height={44}
-                  loading="lazy"
-                  className="mt-1 h-11 w-11 shrink-0 rounded-[10px] border border-border"
-                />
-                <div className="min-w-0">
-                  <Link
-                    to="/projects/$projectId"
-                    params={{ projectId: project.slug }}
-                    className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
-                  >
-                    {project.name}
-                  </Link>
-                  <span className="block text-muted-foreground">
-                    {project.tagline}.{" "}
-                    {(project.overview.split(". ")[0] ?? project.overview).replace(/\.$/, "")}.
-                  </span>
-                  <span className="block text-[13px] text-muted-foreground/80">
-                    <span className="md-token">role:</span> {project.role}{" "}
-                    <span className="md-token">· stack:</span> {project.stack}
-                    {project.appStoreUrl && (
-                      <>
-                        {" "}
-                        <span className="md-token">·</span>{" "}
-                        <a
-                          href={project.appStoreUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-                        >
-                          App Store
-                        </a>
-                      </>
-                    )}
-                  </span>
-                </div>
-              </li>
+            {sideHustles.map((project) => (
+              <ProjectRow key={project.slug} project={project} />
             ))}
           </ul>
         </section>

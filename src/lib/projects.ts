@@ -1,5 +1,7 @@
 export type Project = {
   slug: string;
+  category: "selected" | "side-hustle";
+  kind: "app" | "web" | "design-system";
   name: string;
   tagline: string;
   role: string;
@@ -7,7 +9,7 @@ export type Project = {
   stack: string;
   contribution: string;
   status: string;
-  appStoreUrl: string | null;
+  link: { url: string; label: string } | null;
   overview: string;
   design: string;
   build: string;
@@ -16,7 +18,50 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "tbc-design-system",
+    category: "selected",
+    kind: "design-system",
+    name: "TBC Design System",
+    tagline: "Design system for Georgia's leading digital bank",
+    role: "Product Designer",
+    platform: "iOS · Android · Web",
+    stack: "Figma, design tokens",
+    contribution: "Design system foundations, components, mobile app UI",
+    status: "In production",
+    link: null,
+    overview:
+      "TBC's design system: the foundations, tokens, and component library behind the bank's digital products, including the mobile app UI.",
+    design:
+      "Scalable foundations — color, type, and spacing tokens with reusable components — and the mobile app UI patterns built on top of them.",
+    build:
+      "Maintained as Figma libraries with documentation, keeping designers and engineers in sync across product teams.",
+    outcome:
+      "In production across TBC's digital products, used daily by hundreds of thousands of customers.",
+  },
+  {
+    slug: "paste-bio",
+    category: "selected",
+    kind: "web",
+    name: "paste.bio",
+    tagline: "Online booking for solo pros — on the web",
+    role: "Solo creator — idea, design, code, release",
+    platform: "Web",
+    stack: "React, TypeScript, Supabase",
+    contribution: "Product design, UX/UI, development, launch",
+    status: "Live at paste.bio",
+    link: { url: "https://paste.bio", label: "paste.bio" },
+    overview:
+      "paste.bio gives solo professionals a booking page and a link-in-bio profile in one: services, dynamic pricing, public booking, and automated reminders.",
+    design:
+      "A clean public page a client can book from in seconds, and a simple dashboard for the pro — services, clients, and appointments without the admin feel.",
+    build:
+      "React + TypeScript with Supabase for auth, data, and edge functions; Paddle for payments. The only web project in a lineup of native apps.",
+    outcome: "Live on the web at paste.bio.",
+  },
+  {
     slug: "brain-snacks",
+    category: "side-hustle",
+    kind: "app",
     name: "Brain Snacks",
     tagline: "Bite-size learning feed for iOS",
     role: "Solo creator — idea, design, code, release",
@@ -24,7 +69,7 @@ export const projects: Project[] = [
     stack: "SwiftUI",
     contribution: "Product design, UX/UI, development, App Store release",
     status: "Live on the App Store (v1.0.6)",
-    appStoreUrl: "https://apps.apple.com/app/id6773241217",
+    link: { url: "https://apps.apple.com/app/id6773241217", label: "App Store" },
     overview:
       "Brain Snacks is a calm, scrollable feed of things worth knowing — short, well-written learning cards you can graze on in spare minutes.",
     design:
@@ -35,6 +80,8 @@ export const projects: Project[] = [
   },
   {
     slug: "mindwhisper",
+    category: "side-hustle",
+    kind: "app",
     name: "MindWhisper AI",
     tagline: "Voice-journaling app for mental wellbeing",
     role: "Solo creator — idea, design, code, release",
@@ -42,7 +89,7 @@ export const projects: Project[] = [
     stack: "React Native (Expo), Supabase Edge Functions",
     contribution: "Product design, UX/UI, development, backend proxy, App Store release",
     status: "Live on the App Store (v1.1.3)",
-    appStoreUrl: "https://apps.apple.com/app/id6755791263",
+    link: { url: "https://apps.apple.com/app/id6755791263", label: "App Store" },
     overview:
       "MindWhisper lets you journal by talking. Recordings become transcribed entries with AI-powered reflections that help you notice patterns in how you feel.",
     design:
@@ -54,6 +101,8 @@ export const projects: Project[] = [
   },
   {
     slug: "annoto",
+    category: "side-hustle",
+    kind: "app",
     name: "Annoto",
     tagline: "iOS screenshot annotation app",
     role: "Solo creator — idea, design, code, release",
@@ -61,7 +110,7 @@ export const projects: Project[] = [
     stack: "SwiftUI, SwiftData",
     contribution: "Product design, UX/UI, development, App Store release",
     status: "Live on the App Store (v1.0.2)",
-    appStoreUrl: "https://apps.apple.com/app/id6774044198",
+    link: { url: "https://apps.apple.com/app/id6774044198", label: "App Store" },
     overview:
       "Annoto makes annotating screenshots fast. It includes a Share Extension, so you can mark up a screenshot straight from the iOS share sheet without opening the app first.",
     design:
@@ -73,6 +122,8 @@ export const projects: Project[] = [
   },
   {
     slug: "decision-engine-ai",
+    category: "side-hustle",
+    kind: "app",
     name: "Decision Engine AI",
     tagline: "AI-assisted decision making, native on iOS",
     role: "Solo creator — idea, design, code, release",
@@ -80,7 +131,7 @@ export const projects: Project[] = [
     stack: "SwiftUI, Supabase Edge Functions",
     contribution: "Product design, UX/UI, development, CI/CD pipeline, App Store release",
     status: "Live on the App Store (v1.0.5)",
-    appStoreUrl: "https://apps.apple.com/app/id6760727264",
+    link: { url: "https://apps.apple.com/app/id6760727264", label: "App Store" },
     overview:
       "Decision Engine AI helps people make better decisions: describe the choice you're facing and get a structured AI analysis of options, trade-offs, and a recommendation.",
     design:
