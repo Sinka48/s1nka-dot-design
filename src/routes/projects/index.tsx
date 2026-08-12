@@ -38,12 +38,7 @@ function ProjectsIndex() {
         </p>
 
         <header>
-          <h1 className="mt-6 text-3xl font-semibold tracking-tight">
-            <span className="md-token" aria-hidden="true">
-              #{" "}
-            </span>
-            Projects
-          </h1>
+          <h1 className="mt-6 text-3xl font-semibold tracking-tight">Projects</h1>
           <p className="mt-3 text-[15px] text-muted-foreground">
             Designed, built, and shipped — all live on the App Store.
           </p>
@@ -55,9 +50,6 @@ function ProjectsIndex() {
           {projects.map((project) => (
             <li key={project.slug}>
               <h2 className="flex items-center gap-3 text-lg font-semibold">
-                <span className="md-token" aria-hidden="true">
-                  ##{" "}
-                </span>
                 <img
                   src={`/images/${project.slug}-icon.webp`}
                   alt={`${project.name} app icon`}
@@ -86,11 +78,12 @@ function ProjectsIndex() {
         </ul>
 
         <p className="mt-14 text-xs text-muted-foreground/60">
-          <span className="md-token">&lt;!-- </span>
-          <Link to="/" className="hover:text-foreground">
-            back to README.md
+          <Link
+            to="/"
+            className="underline decoration-border underline-offset-4 hover:text-foreground"
+          >
+            ← back to README.md
           </Link>
-          <span className="md-token"> --&gt;</span>
         </p>
       </article>
     </main>

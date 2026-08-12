@@ -50,10 +50,7 @@ export const Route = createFileRoute("/projects/$projectId")({
 function Meta({ label, value }: { label: string; value: string }) {
   return (
     <li>
-      <span className="md-token" aria-hidden="true">
-        -{" "}
-      </span>
-      <span className="md-strong">**{label}:**</span> {value}
+      <span className="font-semibold text-foreground">{label}:</span> {value}
     </li>
   );
 }
@@ -61,12 +58,7 @@ function Meta({ label, value }: { label: string; value: string }) {
 function Section({ title, children }: { title: string; children: string }) {
   return (
     <section className="mt-10">
-      <h2 className="text-lg font-semibold">
-        <span className="md-token" aria-hidden="true">
-          ##{" "}
-        </span>
-        {title}
-      </h2>
+      <h2 className="text-lg font-semibold">{title}</h2>
       <p className="mt-3 text-[15px] leading-7 text-muted-foreground">{children}</p>
     </section>
   );
@@ -91,9 +83,6 @@ function ProjectPage() {
 
         <header>
           <h1 className="mt-6 flex items-center gap-4 text-3xl font-semibold tracking-tight">
-            <span className="md-token" aria-hidden="true">
-              #{" "}
-            </span>
             <img
               src={`/images/${project.slug}-icon.webp`}
               alt={`${project.name} app icon`}
@@ -103,9 +92,7 @@ function ProjectPage() {
             />
             {project.name}
           </h1>
-          <p className="mt-3 text-[15px] text-muted-foreground">
-            <span className="md-token">&gt;</span> {project.tagline}
-          </p>
+          <p className="mt-3 text-[15px] text-muted-foreground">{project.tagline}</p>
         </header>
 
         <hr className="my-8 border-border" />
@@ -125,26 +112,24 @@ function ProjectPage() {
 
         {project.appStoreUrl && (
           <p className="mt-10 text-[15px]">
-            <span className="md-token" aria-hidden="true">
-              -&gt;{" "}
-            </span>
             <a
               href={project.appStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="md-strong underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+              className="font-semibold text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
             >
-              [View on the App Store]
+              View on the App Store →
             </a>
           </p>
         )}
 
         <p className="mt-14 text-xs text-muted-foreground/60">
-          <span className="md-token">&lt;!-- </span>
-          <Link to="/projects" className="hover:text-foreground">
-            more projects
+          <Link
+            to="/projects"
+            className="underline decoration-border underline-offset-4 hover:text-foreground"
+          >
+            ← more projects
           </Link>
-          <span className="md-token"> --&gt;</span>
         </p>
       </article>
     </main>

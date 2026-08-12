@@ -103,9 +103,6 @@ export const Route = createFileRoute("/")({
 function SectionHeading({ id, children }: { id: string; children: string }) {
   return (
     <h2 id={id} className="text-lg font-semibold">
-      <span className="md-token" aria-hidden="true">
-        ##{" "}
-      </span>
       {children}
     </h2>
   );
@@ -118,12 +115,7 @@ function Index() {
         <p className="md-token text-sm">README.md</p>
 
         <header>
-          <h1 className="mt-6 text-3xl font-semibold tracking-tight">
-            <span className="md-token" aria-hidden="true">
-              #{" "}
-            </span>
-            s1nka
-          </h1>
+          <h1 className="mt-6 text-3xl font-semibold tracking-tight">s1nka</h1>
           <p className="mt-3 text-[15px] text-muted-foreground">
             Kakhaber Sinauridze <span className="md-token">·</span> Product Designer{" "}
             <span className="md-token">·</span> designs it, builds it, ships it
@@ -135,16 +127,14 @@ function Index() {
         <section aria-labelledby="about">
           <SectionHeading id="about">About Me</SectionHeading>
           <p className="mt-4 text-[15px] leading-7 text-muted-foreground">
-            <span className="md-strong">
-              **Product Designer specializing in UX/UI, product design, design systems, and native
-              iOS applications.**
-            </span>{" "}
+            <strong className="font-semibold text-foreground">
+              Product Designer specializing in UX/UI, product design, design systems, and native iOS
+              applications.
+            </strong>{" "}
             I combine strong visual design with user-centered thinking — and I don't stop at
-            mockups: I <span className="md-em">*design, build, and ship*</span> my own apps to the
-            App Store. I also explore <span className="md-em">*programming*</span>,{" "}
-            <span className="md-em">*AI*</span>, and{" "}
-            <span className="md-em">*music production*</span>, which gives me a broader perspective
-            on building and shaping digital products.
+            mockups: I <em>design, build, and ship</em> my own apps to the App Store. I also explore{" "}
+            <em>programming</em>, <em>AI</em>, and <em>music production</em>, which gives me a
+            broader perspective on building and shaping digital products.
           </p>
         </section>
 
@@ -153,12 +143,7 @@ function Index() {
           <ul className="mt-4 space-y-3 text-[15px] leading-7 text-muted-foreground">
             {skillGroups.map((group) => (
               <li key={group.label}>
-                <p className="md-strong">
-                  <span className="md-token" aria-hidden="true">
-                    ###{" "}
-                  </span>
-                  {group.label}
-                </p>
+                <p className="font-semibold text-foreground">{group.label}</p>
                 <p>
                   {group.items.map((item, i) => (
                     <span key={item}>
@@ -198,9 +183,9 @@ function Index() {
                   <Link
                     to="/projects/$projectId"
                     params={{ projectId: project.slug }}
-                    className="md-strong underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                    className="font-semibold text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
                   >
-                    [{project.name}]
+                    {project.name}
                   </Link>
                   <span className="block text-muted-foreground">
                     {project.tagline}.{" "}
@@ -234,9 +219,6 @@ function Index() {
           <SectionHeading id="contact">Contact</SectionHeading>
           <ul className="mt-4 space-y-2 text-[15px] leading-7 text-muted-foreground">
             <li>
-              <span className="md-token" aria-hidden="true">
-                -{" "}
-              </span>
               LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/kakhasinauridze"
@@ -248,9 +230,6 @@ function Index() {
               </a>
             </li>
             <li>
-              <span className="md-token" aria-hidden="true">
-                -{" "}
-              </span>
               Instagram:{" "}
               <a
                 href="https://www.instagram.com/s1nka"
@@ -262,9 +241,6 @@ function Index() {
               </a>
             </li>
             <li>
-              <span className="md-token" aria-hidden="true">
-                -{" "}
-              </span>
               Email:{" "}
               <a
                 href="mailto:kakh.sinauridze@gmail.com"
@@ -277,11 +253,7 @@ function Index() {
         </section>
 
         <footer className="mt-14 text-xs text-muted-foreground/60">
-          <p>
-            <span className="md-token">&lt;!-- </span>© 2026 Kakhaber Sinauridze (s1nka) · built
-            &amp; shipped from this repo
-            <span className="md-token"> --&gt;</span>
-          </p>
+          <p>© 2026 Kakhaber Sinauridze (s1nka) · built &amp; shipped from this repo</p>
         </footer>
       </article>
     </main>
