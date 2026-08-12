@@ -51,10 +51,6 @@ const skillGroups = [
         lead: "Design systems that scale.",
         detail: "Tokens, components, Figma libraries.",
       },
-      {
-        lead: "Prototypes that settle debates.",
-        detail: "Test it in Figma before code exists.",
-      },
     ],
   },
   {
@@ -73,6 +69,10 @@ const skillGroups = [
   {
     label: "Ship",
     items: [
+      {
+        lead: "Product management, built in.",
+        detail: "Roadmap, prioritization, scope calls, releases — handled solo across four live apps.",
+      },
       {
         lead: "Releases as routine.",
         detail: "CI/CD — an update is one push, not a project.",
