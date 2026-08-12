@@ -90,10 +90,17 @@ function ProjectPage() {
         </p>
 
         <header>
-          <h1 className="mt-6 text-3xl font-semibold tracking-tight">
+          <h1 className="mt-6 flex items-center gap-4 text-3xl font-semibold tracking-tight">
             <span className="md-token" aria-hidden="true">
               #{" "}
             </span>
+            <img
+              src={`/images/${project.slug}-icon.webp`}
+              alt={`${project.name} app icon`}
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-xl border border-border"
+            />
             {project.name}
           </h1>
           <p className="mt-3 text-[15px] text-muted-foreground">

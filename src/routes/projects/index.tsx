@@ -54,10 +54,18 @@ function ProjectsIndex() {
         <ul className="space-y-10">
           {projects.map((project) => (
             <li key={project.slug}>
-              <h2 className="text-lg font-semibold">
+              <h2 className="flex items-center gap-3 text-lg font-semibold">
                 <span className="md-token" aria-hidden="true">
                   ##{" "}
                 </span>
+                <img
+                  src={`/images/${project.slug}-icon.webp`}
+                  alt={`${project.name} app icon`}
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                  className="h-8 w-8 shrink-0 rounded-lg border border-border"
+                />
                 <Link
                   to="/projects/$projectId"
                   params={{ projectId: project.slug }}

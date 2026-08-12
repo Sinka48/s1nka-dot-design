@@ -16,7 +16,11 @@ const profileJsonLd = {
       "Product Designer specializing in UX/UI, product design, design systems, and native iOS applications. Designs, builds, and ships apps end-to-end.",
     url: SITE_URL,
     email: "mailto:kakh.sinauridze@gmail.com",
-    sameAs: ["https://github.com/Sinka48"],
+    sameAs: [
+      "https://www.linkedin.com/in/kakhasinauridze",
+      "https://www.instagram.com/s1nka",
+      "https://github.com/Sinka48",
+    ],
     knowsAbout: [
       "Product Design",
       "UX Design",
@@ -66,7 +70,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product Designer focused on UX/UI, product design, and design systems. I design, build, and ship native iOS apps with SwiftUI — Annoto, MindWhisper AI, Decision Engine AI, Brain Snacks — all live on the App Store.",
+          "Product Designer focused on UX/UI, product design, and design systems. I design, build, and ship native iOS apps with SwiftUI — Brain Snacks, MindWhisper AI, Annoto, Decision Engine AI — all live on the App Store.",
       },
       { property: "og:title", content: "Kakhaber Sinauridze (s1nka) — Product Designer" },
       {
@@ -179,40 +183,48 @@ function Index() {
               Full case studies →
             </Link>
           </p>
-          <ul className="mt-4 space-y-6 text-[15px] leading-7">
+          <ul className="mt-5 space-y-6 text-[15px] leading-7">
             {projects.map((project) => (
-              <li key={project.slug}>
-                <span className="md-token" aria-hidden="true">
-                  -{" "}
-                </span>
-                <Link
-                  to="/projects/$projectId"
-                  params={{ projectId: project.slug }}
-                  className="md-strong underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
-                >
-                  [{project.name}]
-                </Link>
-                <span className="block pl-5 text-muted-foreground">
-                  {project.tagline}. {project.overview.split(". ")[0]}.
-                </span>
-                <span className="block pl-5 text-[13px] text-muted-foreground/80">
-                  <span className="md-token">role:</span> {project.role}{" "}
-                  <span className="md-token">· stack:</span> {project.stack}
-                  {project.appStoreUrl && (
-                    <>
-                      {" "}
-                      <span className="md-token">·</span>{" "}
-                      <a
-                        href={project.appStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-                      >
-                        App Store
-                      </a>
-                    </>
-                  )}
-                </span>
+              <li key={project.slug} className="flex items-start gap-4">
+                <img
+                  src={`/images/${project.slug}-icon.webp`}
+                  alt={`${project.name} app icon`}
+                  width={44}
+                  height={44}
+                  loading="lazy"
+                  className="mt-1 h-11 w-11 shrink-0 rounded-[10px] border border-border"
+                />
+                <div className="min-w-0">
+                  <Link
+                    to="/projects/$projectId"
+                    params={{ projectId: project.slug }}
+                    className="md-strong underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    [{project.name}]
+                  </Link>
+                  <span className="block text-muted-foreground">
+                    {project.tagline}.{" "}
+                    {(project.overview.split(". ")[0] ?? project.overview).replace(/\.$/, "")}.
+                  </span>
+                  <span className="block text-[13px] text-muted-foreground/80">
+                    <span className="md-token">role:</span> {project.role}{" "}
+                    <span className="md-token">· stack:</span> {project.stack}
+                    {project.appStoreUrl && (
+                      <>
+                        {" "}
+                        <span className="md-token">·</span>{" "}
+                        <a
+                          href={project.appStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+                        >
+                          App Store
+                        </a>
+                      </>
+                    )}
+                  </span>
+                </div>
               </li>
             ))}
           </ul>
@@ -225,14 +237,28 @@ function Index() {
               <span className="md-token" aria-hidden="true">
                 -{" "}
               </span>
-              GitHub:{" "}
+              LinkedIn:{" "}
               <a
-                href="https://github.com/Sinka48"
+                href="https://www.linkedin.com/in/kakhasinauridze"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
               >
-                github.com/Sinka48
+                linkedin.com/in/kakhasinauridze
+              </a>
+            </li>
+            <li>
+              <span className="md-token" aria-hidden="true">
+                -{" "}
+              </span>
+              Instagram:{" "}
+              <a
+                href="https://www.instagram.com/s1nka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+              >
+                @s1nka
               </a>
             </li>
             <li>
