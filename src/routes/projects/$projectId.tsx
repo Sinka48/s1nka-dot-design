@@ -124,7 +124,7 @@ function ProjectPage() {
               rel="noopener noreferrer"
               className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
             >
-              {project.kind === "app" ? "View on the App Store →" : "Open paste.bio →"}
+              {project.kind === "app" ? "View on the App Store →" : `Open ${project.link.label} →`}
             </a>
           </p>
         )}

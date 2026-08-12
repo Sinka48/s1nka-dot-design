@@ -28,8 +28,8 @@ export const projects: Project[] = [
     stack: "Figma, design tokens",
     contribution:
       "Owning the design system for mobile platforms — foundations, components, patterns, mobile app UI",
-    status: "In production",
-    link: null,
+    status: "Live at tbcbank.ge",
+    link: { url: "https://tbcbank.ge/en", label: "tbcbank.ge" },
     overview:
       "TBC Bank's design system on mobile: the foundations, tokens, and component library behind the bank's iOS and Android apps. I manage everything for the mobile platforms.",
     design:
