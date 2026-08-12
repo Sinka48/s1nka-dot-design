@@ -6,11 +6,12 @@
 
 Product Designer combining strong visual design with user-centered thinking, shipping end-to-end: design, code, App Store release. Additional interests: programming, AI, and music production.
 
-## Skills
+## Skills / Capabilities
 
-- Design: Product Design, UX/UI, Interaction Design, Design Systems, Prototyping, Figma, Visual Design
-- Development: SwiftUI, iOS, React, TypeScript, AI-assisted development
-- Other: AI, Music Production, Content Automation
+- Design: takes a fuzzy idea from first sketch to a live App Store release (no hand-offs); design systems with tokens, components, and Figma libraries; interactive Figma prototypes that validate ideas before code
+- Build: ships what he designs — four native iOS apps live on the App Store, built end-to-end in SwiftUI; React + TypeScript for web; AI-accelerated design→build→ship workflow
+- Ship: automated CI/CD release pipelines (GitHub Actions, Fastlane); server-side AI proxies (Supabase Edge Functions) so no API keys ship in clients
+- Beyond: music production, content automation
 
 ## Selected Projects (all designed, built, and shipped solo; all live on the App Store)
 

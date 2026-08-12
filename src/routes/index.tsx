@@ -43,22 +43,57 @@ const skillGroups = [
   {
     label: "Design",
     items: [
-      "Product Design",
-      "UX/UI",
-      "Interaction Design",
-      "Design Systems",
-      "Prototyping",
-      "Figma",
-      "Visual Design",
+      {
+        lead: "Fuzzy idea → shippable product.",
+        detail:
+          "I take a problem from first sketch to a live App Store release — no hand-offs, nothing lost in translation.",
+      },
+      {
+        lead: "Design systems that scale.",
+        detail:
+          "Tokens, reusable components, and Figma libraries that keep a product consistent while it grows.",
+      },
+      {
+        lead: "Prototypes that settle debates.",
+        detail:
+          'Quick interactive Figma prototypes that answer "will this actually work?" before a line of code is written.',
+      },
     ],
   },
   {
-    label: "Development",
-    items: ["SwiftUI", "iOS", "React", "TypeScript", "AI-assisted development"],
+    label: "Build",
+    items: [
+      {
+        lead: "I ship what I design.",
+        detail:
+          "Four native iOS apps live on the App Store, built end-to-end in SwiftUI. React + TypeScript when the product lives on the web.",
+      },
+      {
+        lead: "AI-accelerated workflow.",
+        detail:
+          "I use AI tooling to compress design → build → ship from months to weeks — while keeping taste in the loop.",
+      },
+    ],
   },
   {
-    label: "Other",
-    items: ["AI", "Music Production", "Content Automation"],
+    label: "Ship",
+    items: [
+      {
+        lead: "Releases as routine, not events.",
+        detail:
+          "Automated CI/CD pipelines (GitHub Actions, Fastlane) — shipping an update is one push, not a project.",
+      },
+      {
+        lead: "Secure by default.",
+        detail:
+          "Server-side AI proxies (Supabase Edge Functions) so no API keys ever ship inside an app.",
+      },
+      {
+        lead: "Range beyond screens.",
+        detail:
+          "Music production and content automation — trained taste and systems thinking from outside product design.",
+      },
+    ],
   },
 ];
 
@@ -140,18 +175,18 @@ function Index() {
 
         <section aria-labelledby="skills" className="mt-12">
           <SectionHeading id="skills">Skills</SectionHeading>
-          <ul className="mt-4 space-y-3 text-[15px] leading-7 text-muted-foreground">
+          <ul className="mt-4 space-y-6 text-[15px] leading-7 text-muted-foreground">
             {skillGroups.map((group) => (
               <li key={group.label}>
-                <p className="font-semibold text-foreground">{group.label}</p>
-                <p>
-                  {group.items.map((item, i) => (
-                    <span key={item}>
-                      {i > 0 && <span className="md-token"> · </span>}
-                      {item}
-                    </span>
+                <p className="md-token text-[13px] uppercase tracking-wider">{group.label}</p>
+                <ul className="mt-1 space-y-2">
+                  {group.items.map((item) => (
+                    <li key={item.lead}>
+                      <span className="font-semibold text-foreground">{item.lead}</span>{" "}
+                      {item.detail}
+                    </li>
                   ))}
-                </p>
+                </ul>
               </li>
             ))}
           </ul>
