@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build (node server preset)
+        run: bun run build
+        env:
+          NITRO_PRESET: node_server
+
+      - name: Prerender static site
+        run: |
+          node .output/server/index.mjs &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && break
+            sleep 1
+          done
+          mkdir -p site
+          cp -r .output/public/. site/
+          curl -sf http://localhost:3000/ -o site/index.html
+          curl -s http://localhost:3000/definitely-not-a-page -o site/404.html
+          kill $SERVER_PID
+          test -s site/index.html
+          grep -q "ld+json" site/index.html
+
+      - name: Add custom domain
+        run: echo "s1nka.com" > site/CNAME
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
