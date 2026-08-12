@@ -138,7 +138,7 @@ function SectionHeading({ id, children }: { id: string; children: string }) {
 function Index() {
   return (
     <main className="min-h-screen bg-background px-6 py-20 font-mono text-foreground">
-      <article className="mx-auto w-full max-w-2xl">
+      <article className="w-full max-w-2xl">
         <p className="md-token text-sm">s1nka.com</p>
 
         <header>
