@@ -43,11 +43,16 @@ jobs:
           done
           mkdir -p site
           cp -r .output/public/. site/
-          curl -sf http://localhost:3000/ -o site/index.html
+          ROUTES="/ /projects /projects/annoto /projects/mindwhisper /projects/decision-engine-ai /projects/brain-snacks"
+          for route in $ROUTES; do
+            if [ "$route" = "/" ]; then out="site/index.html"; else mkdir -p "site$route"; out="site$route/index.html"; fi
+            curl -sf "http://localhost:3000$route" -o "$out"
+            test -s "$out"
+          done
           curl -s http://localhost:3000/definitely-not-a-page -o site/404.html
           kill $SERVER_PID
-          test -s site/index.html
           grep -q "ld+json" site/index.html
+          grep -q "ld+json" site/projects/annoto/index.html
 
       - name: Add custom domain
         run: echo "s1nka.com" > site/CNAME

@@ -1,23 +1,23 @@
-# s1nka
+# s1nka — Kakhaber Sinauridze
 
-> s1nka is a Product Designer who designs, builds, and ships real products — working across UX/UI and product design, with native iOS apps live on the App Store.
+> Kakhaber Sinauridze (s1nka) is a Product Designer specializing in UX/UI, product design, design systems, and native iOS applications — he designs, builds, and ships his own apps to the App Store.
 
 ## About
 
-Product Designer focused on thoughtful, intuitive, visually refined digital experiences. Combines strong visual design with user-centered thinking, and ships end-to-end: design, code, App Store release. Additional interests: programming, AI, and music production.
+Product Designer combining strong visual design with user-centered thinking, shipping end-to-end: design, code, App Store release. Additional interests: programming, AI, and music production.
 
 ## Skills
 
-- Design: product design, UX/UI, design systems, prototyping, Figma
-- Build: SwiftUI, React + TypeScript, AI-assisted development
-- Beyond: music production, content automation
+- Design: Product Design, UX/UI, Interaction Design, Design Systems, Prototyping, Figma, Visual Design
+- Development: SwiftUI, iOS, React, TypeScript, AI-assisted development
+- Other: AI, Music Production, Content Automation
 
-## Selected Projects
+## Selected Projects (all designed, built, and shipped solo; all live on the App Store)
 
-- Annoto (https://apps.apple.com/app/id6774044198): iOS screenshot annotation app with a share extension, built in SwiftUI. Live on the App Store.
-- MindWhisper (https://apps.apple.com/app/id6755791263): voice-journaling app for mental wellbeing with AI-powered reflections. Live on the App Store.
-- Decision Engine AI (https://apps.apple.com/app/id6760727264): native SwiftUI app for structured, AI-assisted decision making. Live on the App Store.
-- Brain Snacks: bite-size learning feed for iOS.
+- Annoto (https://s1nka.com/projects/annoto | https://apps.apple.com/app/id6774044198): iOS screenshot annotation app with a Share Extension. SwiftUI + SwiftData. v1.0.2.
+- MindWhisper AI (https://s1nka.com/projects/mindwhisper | https://apps.apple.com/app/id6755791263): voice-journaling app for mental wellbeing with AI-powered reflections. React Native (Expo) + Supabase Edge Functions. v1.1.3.
+- Decision Engine AI (https://s1nka.com/projects/decision-engine-ai | https://apps.apple.com/app/id6760727264): native SwiftUI app for structured, AI-assisted decision making, with fully automated CI/CD. v1.0.5.
+- Brain Snacks (https://s1nka.com/projects/brain-snacks | https://apps.apple.com/app/id6773241217): bite-size learning feed for iOS. SwiftUI. v1.0.6.
 
 ## Contact
 
